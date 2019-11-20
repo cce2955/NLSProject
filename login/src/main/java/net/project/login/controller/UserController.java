@@ -29,7 +29,7 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@GetMapping("/users")
+	@GetMapping("/users/all")
 	public  List<User> getAllUsers(){
 		return userRepository.findAll();
 	}//List all users
@@ -69,4 +69,5 @@ public class UserController {
 		response.put("deleted",  Boolean.TRUE);
 		return response;
 	}
+		
 }
